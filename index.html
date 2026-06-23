@@ -39,20 +39,22 @@
         </div>
 
         <!-- БЛОК 3: МЕСТО ПРОВЕДЕНИЯ -->
-        <div class="wedding-block">
-            <div class="venue-card-new">
-                <div class="venue-content-new">
-                    <div class="venue-title-new">Место проведения</div>
-                    <div class="venue-box-new">
-                        <div class="venue-photo-wrapper-new">
-                            <img class="venue-photo-new" src="https://sun9-82.userapi.com/s/v1/ig2/n9QF-8qayPXIeRy9B3PvNrJJUgHWp5pvrH1VzPuaKJ1NyLt95css5AHB22Wd-9fbC1OWAPN5TwORCMFWYP3anhiM.jpg?quality=95&as=32x48,48x72,72x108,108x162,160x240,240x360,360x539,480x719,540x809,610x914&from=bu&u=r8QN2X-VSZ6j2Tjo18yC6jtAT4K-hr2dJIGKAe7Xq7g&cs=610x0" alt="Ресторан">
-                        </div>
-                        <div class="venue-hint-new">(нажав на фото можно увидеть геолокацию ресторана)</div>
-                        <div class="venue-address-new">г. Самара, Загородный парк<br/>ул. Центральная, 21А, д. Высоково<br/>Вы можете приехать на своем автомобиле, есть парковочные места</div>
-                    </div>
+<div class="wedding-block">
+    <div class="venue-card-new">
+        <div class="venue-content-new">
+            <div class="venue-title-new">Место проведения</div>
+            <div class="venue-box-new">
+                <div class="venue-photo-wrapper-new">
+                    <a href="https://yandex.ru/maps/org/vokrug_ognya/11512489680/?ll=49.291742%2C53.497419&source=serp_navig&z=16.71" target="_blank">
+                        <img class="venue-photo-new" src="https://sun9-82.userapi.com/s/v1/ig2/n9QF-8qayPXIeRy9B3PvNrJJUgHWp5pvrH1VzPuaKJ1NyLt95css5AHB22Wd-9fbC1OWAPN5TwORCMFWYP3anhiM.jpg?quality=95&as=32x48,48x72,72x108,108x162,160x240,240x360,360x539,480x719,540x809,610x914&from=bu&u=r8QN2X-VSZ6j2Tjo18yC6jtAT4K-hr2dJIGKAe7Xq7g&cs=610x0" alt="Ресторан">
+                    </a>
                 </div>
+                <div class="venue-hint-new">(нажав на фото можно увидеть геолокацию ресторана)</div>
+                <div class="venue-address-new">г. Самара, Загородный парк<br/>ул. Центральная, 21А, д. Высоково<br/>Вы можете приехать на своем автомобиле, есть парковочные места</div>
             </div>
         </div>
+    </div>
+</div>
 
         <!-- БЛОК 4: РАСПИСАНИЕ ДНЯ -->
         <div class="wedding-block">
@@ -91,6 +93,71 @@
         </div>
     </div>
 
+
+    <!-- БЛОК 6: ТАЙМЕР И ПОДПИСЬ -->
+<div class="wedding-block">
+    <div class="timer-card-new">
+        <div class="timer-content-new">
+            <div class="timer-top">
+                <div class="timer-title-new">До создания нашей семьи</div>
+                <div class="timer-box-new" id="countdownBoxNew">
+                    <div class="timer-digits-new" id="timerDigitsNew">-- дн. -- ч. -- мин. -- сек.</div>
+                </div>
+            </div>
+            <div class="timer-footer-new">Будем вас ждать!<br/>С любовью, Егор <br/>и Алёна</div>
+        </div>
+    </div>
+</div>
+
+        <!-- БЛОК: КОНТАКТЫ ДИЗАЙНЕРА -->
+        <div class="wedding-block">
+            <div class="designer-card">
+                <div class="designer-content">
+                    <div class="designer-title">контакты дизайнера</div>
+                    <div class="designer-info">
+                        <div class="designer-photo">
+                            <img src="https://psv4.userapi.com/s/v1/d2/I0H0e7kHwIjf5jEdmAmY24rIMNM-B7L__Nn74prWf2cLC-exaMT19p_VUUHGE6bbBdOC898YL57TnIVZX1qdaJPS_SbxgyFWonHqKEyyMpBxdRVb59r0BUBcz73zuBja9vRxiVku6wMy/UYAdTXqiCZDPZBTuqstgEsIRKtChfJGa73xgOnq5vw2XdkizDhrjk_65eYZZBBmQoI.jpg" alt="Дизайнер">
+                        </div>
+                        <div class="designer-links">
+                            <div class="designer-link tg-link" id="tgLink">
+                                <div class="link-text">tg</div>
+                            </div>
+                            <div class="designer-link vk-link" id="vkLink">
+                                <div class="link-text">vk</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+<script>
+        // Таймер до 23 августа 2027 года
+        function updateCountdownNew() {
+            const targetDate = new Date(2027, 7, 23, 0, 0, 0);
+            const now = new Date();
+            const diff = targetDate - now;
+            
+            if(diff <= 0) {
+                document.getElementById('timerDigitsNew').innerText = '0 дн. 0 ч. 0 мин. 0 сек.';
+                return;
+            }
+            
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (86400000)) / (3600000));
+            const minutes = Math.floor((diff % 3600000) / 60000);
+            const seconds = Math.floor((diff % 60000) / 1000);
+            
+            document.getElementById('timerDigitsNew').innerHTML = 
+                `${days} дн. ${hours} ч. ${minutes} мин. ${seconds} сек.`;
+        }
+        
+        // Запускаем таймер
+        updateCountdownNew();
+        setInterval(updateCountdownNew, 1000);
+    </script>
+
     <script>
         // Кнопка "Связаться с организатором"
         document.getElementById('contactBtnNew')?.addEventListener('click', () => {
@@ -101,6 +168,16 @@
         document.querySelector('.venue-photo-new')?.addEventListener('click', () => {
             window.open('https://yandex.ru/maps/?text=Самара+Загородный+парк+ул.+Центральная+21А', '_blank');
         });
+
+            // Ссылки дизайнера
+    document.getElementById('tgLink')?.addEventListener('click', () => {
+        window.open('https://t.me/a_krt06', '_blank');  // замените на ваш Telegram
+    });
+
+    document.getElementById('vkLink')?.addEventListener('click', () => {
+        window.open('https://vk.com/a_kortunova_a', '_blank');  // замените на ваш VK
+    });
     </script>
+
 </body>
 </html>
