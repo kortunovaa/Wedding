@@ -178,7 +178,7 @@ body {
 .greeting-content-new {
     width: 357px;
     left: 38px;
-    top: 23px;
+    top: 40px;
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -260,6 +260,11 @@ body {
     border-radius: 23px;
 }
 
+.venue-photo-wrapper-new a {
+    display: block;
+    text-decoration: none;
+}
+
 .venue-photo-new {
     width: 100%;
     height: 282px;
@@ -268,13 +273,15 @@ body {
     cursor: pointer;
 }
 
+/* ===== ТЕКСТЫ С ШРИФТОМ CASLON BECKER ===== */
 .venue-hint-new {
     align-self: stretch;
     text-align: center;
     color: white;
-    font-size: 13px;
-    font-family: 'Wulkan Display', serif;
-    font-weight: 500;
+    font-size: 16px;
+    font-family: 'Caslon Becker No540 Swash', serif;
+    font-style: italic;
+    font-weight: 400;
     line-height: 20px;
 }
 
@@ -282,9 +289,10 @@ body {
     align-self: stretch;
     text-align: center;
     color: #F3E7DF;
-    font-size: 20px;
-    font-family: 'Wulkan Display', serif;
-    font-weight: 500;
+    font-size: 25px;
+    font-family: 'Caslon Becker No540 Swash', serif;
+    font-style: italic;
+    font-weight: 400;
     line-height: 23px;
 }
 
@@ -301,7 +309,7 @@ body {
 .schedule-title-new {
     width: 368px;
     left: 32px;
-    top: 38px;
+    top: 32px;
     position: absolute;
     text-align: center;
     color: #F3E7DF;
@@ -330,7 +338,7 @@ body {
 
 /* Время (15:30, 16:00 и т.д.) */
 .schedule-time-new {
-    font-size: 28px;
+    font-size: 32px;
     font-family: 'Caslon Becker No540 Swash', serif;
     font-style: italic;
     font-weight: 400;
@@ -340,7 +348,7 @@ body {
 
 /* Описание (Сбор гостей, Церемония и т.д.) */
 .schedule-desc-new {
-    font-size: 18px;
+    font-size: 22px;
     font-family: 'Caslon Becker No540 Swash', serif;
     font-style: italic;
     font-weight: 400;
@@ -432,6 +440,177 @@ body {
     background: #2a4780;
     transform: scale(1.02);
 }
+
+/* ========== БЛОК 6 ========== */
+.timer-card-new {
+    width: 432px;
+    height: 419px;
+    position: relative;
+    background: #031E55;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.timer-content-new {
+    width: 345px;
+    left: 43px;
+    top: 15px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 61px;
+}
+
+.timer-top {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 29px;
+}
+
+.timer-title-new {
+    width: 311px;
+    text-align: center;
+    color: #F3E7DF;
+    font-size: 45px;
+    font-family: 'Caslon Becker No540 Swash', serif;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 27px;
+}
+
+.timer-box-new {
+    align-self: stretch;
+    height: 82px;
+    background: #F3E7DF;
+    border-radius: 21px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.timer-digits-new {
+    color: #031E55;
+    font-size: 28px;
+    font-family: 'Caslon Becker No540 Swash', serif;
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+.timer-footer-new {
+    align-self: stretch;
+    text-align: center;
+    color: #F3E7DF;
+    font-size: 50px;
+    font-family: 'Caslon Becker No540 Swash', serif;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 50px;
+}
+
+/* ========== БЛОК: КОНТАКТЫ ДИЗАЙНЕРА ========== */
+.designer-card {
+    width: 432px;
+    height: 139px;
+    background: linear-gradient(180deg, #031E55 0%, #0a2f6a 55%, #031E55 99%);
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+}
+
+.designer-content {
+    width: 335px;
+    left: 29px;
+    top: 16px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 11px;
+}
+
+.designer-title {
+    text-align: center;
+    color: #F3E7DF;
+    font-size: 20px;
+    font-family: 'Caslon Becker No540 Swash', serif;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.designer-info {
+    align-self: stretch;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 78px;
+}
+
+.designer-photo {
+    width: 73px;
+    height: 72px;
+    background: white;
+    overflow: hidden;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.designer-photo img {
+    width: 90px;
+    height: 114px;
+    object-fit: cover;
+    position: relative;
+    left: 2px;
+    top: -5px;
+}
+
+.designer-links {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+}
+
+.designer-link {
+    width: 72px;
+    height: 40px;
+    padding-bottom: 3px;
+    padding-left: 17px;
+    padding-right: 17px;
+    background: radial-gradient(ellipse 50% 50% at 50% 50%, #000f48 0%, #303e79 100%);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.designer-link:hover {
+    opacity: 0.85;
+    transform: scale(1.02);
+}
+
+.link-text {
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    font-family: 'Caslon Becker No540 Swash', serif;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 20px;
+}
+
 
 /* ========== МОБИЛЬНЫЙ ФИКС ========== */
 @media (max-width: 480px) {
