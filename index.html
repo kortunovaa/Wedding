@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=yes">
+    <title>Егор и Алёна | Приглашение на свадьбу</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page-container">
+        <!-- БЛОК 1: ГЛАВНЫЙ -->
+        <div class="wedding-block">
+            <div class="hero-card-new">
+                <div class="blur-circle blur-1"></div>
+                <div class="blur-circle blur-2"></div>
+                <div class="blur-circle blur-3"></div>
+                <div class="hero-content-new">
+                    <div class="hero-text-top">
+                        <div class="hero-subtitle">Приглашение на свадьбу</div>
+                        <div class="hero-names-new">Егор<br/>и<br/>Алёна</div>
+                        <div class="hero-date-new">23.08.2027</div>
+                    </div>
+                    <img class="hero-photo-new" src="https://i.pinimg.com/736x/fa/d3/9d/fad39d00376672e4ed6d89c15b55e911.jpg" alt="Егор и Алёна">
+                </div>
+            </div>
+        </div>
+
+        <!-- БЛОК 2: ДАТА И ТЕКСТ -->
+        <div class="wedding-block">
+            <div class="greeting-card-new">
+                <div class="greeting-content-new">
+                    <div class="greeting-date-new">23.08.2027</div>
+                    <div class="greeting-text-new">
+                        Этот день станет для нас поистине незабываемым, и мы мечтаем провести его рядом с Вами.<br/>
+                        Приглашаем Вас присоединиться к нашей свадьбе и украсить ее своим присутствием!
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- БЛОК 3: МЕСТО ПРОВЕДЕНИЯ -->
+        <div class="wedding-block">
+            <div class="venue-card-new">
+                <div class="venue-content-new">
+                    <div class="venue-title-new">Место проведения</div>
+                    <div class="venue-box-new">
+                        <div class="venue-photo-wrapper-new">
+                            <img class="venue-photo-new" src="https://sun9-82.userapi.com/s/v1/ig2/n9QF-8qayPXIeRy9B3PvNrJJUgHWp5pvrH1VzPuaKJ1NyLt95css5AHB22Wd-9fbC1OWAPN5TwORCMFWYP3anhiM.jpg?quality=95&as=32x48,48x72,72x108,108x162,160x240,240x360,360x539,480x719,540x809,610x914&from=bu&u=r8QN2X-VSZ6j2Tjo18yC6jtAT4K-hr2dJIGKAe7Xq7g&cs=610x0" alt="Ресторан">
+                        </div>
+                        <div class="venue-hint-new">(нажав на фото можно увидеть геолокацию ресторана)</div>
+                        <div class="venue-address-new">г. Самара, Загородный парк<br/>ул. Центральная, 21А, д. Высоково<br/>Вы можете приехать на своем автомобиле, есть парковочные места</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- БЛОК 4: РАСПИСАНИЕ ДНЯ -->
+        <div class="wedding-block">
+            <div class="schedule-card-new">
+                <div class="schedule-title-new">Расписание дня</div>
+                <div class="schedule-list-new">
+                    <div class="schedule-item-new">
+                        <span class="schedule-time-new">15:30<br/></span>
+                        <span class="schedule-desc-new">Сбор гостей<br/>Встречаемся, наслаждаемся фуршетом, настраиваемся на веселую свадьбу.<br/><br/></span>
+                        <span class="schedule-time-new">16:00<br/></span>
+                        <span class="schedule-desc-new">Церемония<br/>Немного радостных трогательных формальностей.<br/><br/></span>
+                        <span class="schedule-time-new">17:00<br/></span>
+                        <span class="schedule-desc-new">Банкет<br/>Время вкусной еды, музыки, приятных пожеланий и танцев.<br/><br/></span>
+                        <span class="schedule-time-new">23:00<br/></span>
+                        <span class="schedule-desc-new">Окончание банкета<br/>Дорогие гости, такси вызовем, всё будет хорошо!</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- БЛОК 5: ОРГАНИЗАЦИОННЫЕ МОМЕНТЫ -->
+        <div class="wedding-block">
+            <div class="organizer-card-new">
+                <div class="organizer-content-new">
+                    <div class="organizer-title-new">Организационные моменты</div>
+                    <div class="organizer-list-new">
+                        <div class="org-item-new">Мы не хотим обременять вас поиском, лучшим подарком будет конверт - вклад в развитие молодой семьи</div>
+                        <div class="org-dot-new"></div>
+                        <div class="org-item-new">Вместо букета цветов мы будем рады бутылочке вашего любимого вина.<br/>Еще один повод встретиться вместе!</div>
+                        <div class="org-dot-new"></div>
+                        <div class="org-item-new">Если у вас остались вопросы - свяжитесь с нашим организатором Алиной</div>
+                    </div>
+                    <div class="organizer-button-new" id="contactBtnNew">Связаться с организатором</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Кнопка "Связаться с организатором"
+        document.getElementById('contactBtnNew')?.addEventListener('click', () => {
+            window.open('https://vk.com/a_kortunova_a', '_blank');
+        });
+
+        // Фото места проведения - геолокация
+        document.querySelector('.venue-photo-new')?.addEventListener('click', () => {
+            window.open('https://yandex.ru/maps/?text=Самара+Загородный+парк+ул.+Центральная+21А', '_blank');
+        });
+    </script>
+</body>
+</html>
