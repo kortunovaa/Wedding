@@ -11,7 +11,7 @@ html, body {
 }
 
 html {
-    background: #d4c3b8;
+    background: rgba(3, 30, 85, 1);
 }
 
 body {
@@ -690,17 +690,17 @@ html, body {
     padding: 0;
     display: block;
 }
-
 /* ========== МОБИЛЬНЫЙ ФИКС ========== */
 @media (max-width: 480px) {
     body {
         background: #d4c3b8 !important;
+        margin: 0;
+        padding: 0;
         overflow-x: hidden;
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin: 0;
-        padding: 0;
+        justify-content: flex-start;
     }
     
     .page-container {
@@ -711,7 +711,6 @@ html, body {
         overflow-x: hidden;
         margin: 0;
         padding: 0;
-        gap: 0;
     }
     
     .wedding-block {
@@ -720,7 +719,6 @@ html, body {
         width: 100%;
         margin: 0;
         padding: 0;
-        line-height: 0;
     }
     
     .hero-card-new,
@@ -731,14 +729,13 @@ html, body {
     .timer-card-new,
     .designer-card {
         width: 432px;
+        margin: 0 auto;
         flex-shrink: 0;
         transform-origin: top center;
         transform: scale(0.9);
-        margin: 0 auto 0 -5px;
-        padding: 0;
-        display: block;
     }
     
+    /* Для очень маленьких экранов (до 380px) */
     @media (max-width: 380px) {
         .hero-card-new,
         .greeting-card-new,
@@ -748,7 +745,6 @@ html, body {
         .timer-card-new,
         .designer-card {
             transform: scale(0.82);
-            margin: 0 auto 0 -8px;
         }
     }
 }
