@@ -694,57 +694,13 @@ html, body {
 @media (max-width: 480px) {
     body {
         background: #d4c3b8 !important;
-        margin: 0;
-        padding: 0;
-        overflow-x: hidden;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
     }
-    
-    .page-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        overflow-x: hidden;
-        margin: 0;
-        padding: 0;
-    }
-    
-    .wedding-block {
-        display: flex;
-        justify-content: center;
-        width: 100%;
-        margin: 0;
-        padding: 0;
-    }
-    
     .hero-card-new,
     .greeting-card-new,
     .venue-card-new,
     .schedule-card-new,
-    .organizer-card-new,
-    .timer-card-new,
-    .designer-card {
+    .organizer-card-new {
         width: 432px;
         margin: 0 auto;
-        flex-shrink: 0;
-        transform-origin: top center;
-        transform: scale(0.9);
-    }
-    
-    /* Для очень маленьких экранов (до 380px) */
-    @media (max-width: 380px) {
-        .hero-card-new,
-        .greeting-card-new,
-        .venue-card-new,
-        .schedule-card-new,
-        .organizer-card-new,
-        .timer-card-new,
-        .designer-card {
-            transform: scale(0.82);
-        }
     }
 }
