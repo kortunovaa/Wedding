@@ -654,6 +654,43 @@ body {
 }
 
 
+/* ========== RESET И БАЗОВЫЕ НАСТРОЙКИ ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+/* ========== УБИРАЕМ ПРОМЕЖУТКИ МЕЖДУ БЛОКАМИ ========== */
+.page-container {
+    gap: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.wedding-block {
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+}
+
+.hero-card-new,
+.greeting-card-new,
+.venue-card-new,
+.schedule-card-new,
+.organizer-card-new,
+.timer-card-new,
+.designer-card {
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
 /* ========== МОБИЛЬНЫЙ ФИКС ========== */
 @media (max-width: 480px) {
     body {
@@ -662,6 +699,8 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin: 0;
+        padding: 0;
     }
     
     .page-container {
@@ -670,12 +709,18 @@ body {
         align-items: center;
         width: 100%;
         overflow-x: hidden;
+        margin: 0;
+        padding: 0;
+        gap: 0;
     }
     
     .wedding-block {
         display: flex;
         justify-content: center;
         width: 100%;
+        margin: 0;
+        padding: 0;
+        line-height: 0;
     }
     
     .hero-card-new,
@@ -689,10 +734,11 @@ body {
         flex-shrink: 0;
         transform-origin: top center;
         transform: scale(0.9);
-        margin: 0 auto 0 -5px;  /* ← отрицательный margin сдвигает влево */
+        margin: 0 auto 0 -5px;
+        padding: 0;
+        display: block;
     }
     
-    /* Для очень маленьких экранов */
     @media (max-width: 380px) {
         .hero-card-new,
         .greeting-card-new,
