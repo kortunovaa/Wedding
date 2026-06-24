@@ -165,6 +165,21 @@ body {
     object-fit: cover;
 }
 
+/* ========== АНИМАЦИЯ ДЛЯ БЛОКА 1 ========== */
+
+/* Базовое состояние — скрыто и сдвинуто влево */
+.animate-hero {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* Состояние после появления — видимо и на месте */
+.animate-hero.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
 /* ========== БЛОК 2 ========== */
 .greeting-card-new {
     width: 432px;
@@ -206,8 +221,20 @@ body {
     font-family: 'Caslon Becker No540 Swash', serif;
     font-style: italic;
     font-weight: 400;
-    text-transform: lowercase;
+    /* text-transform: lowercase;  ← УДАЛИТЬ ЭТУ СТРОКУ! */
     line-height: 25px;
+}
+
+/* ========== АНИМАЦИЯ ДЛЯ БЛОКА 2 ========== */
+.animate-greeting {
+    opacity: 0;
+    transform: translateX(-40px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.animate-greeting.visible {
+    opacity: 1;
+    transform: translateX(0);
 }
 
 /* ========== БЛОК 3 ========== */
@@ -309,7 +336,7 @@ body {
 .schedule-title-new {
     width: 368px;
     left: 32px;
-    top: 32px;
+    top: 20px;
     position: absolute;
     text-align: center;
     color: #F3E7DF;
@@ -323,7 +350,7 @@ body {
 .schedule-list-new {
     width: 380px;
     left: 26px;
-    top: 80px;
+    top: 65px;
     position: absolute;
     background: rgba(243, 231, 223, 0.1);
     padding: 24px 20px;
@@ -354,6 +381,21 @@ body {
     font-weight: 400;
     line-height: 22px;
     color: rgba(243, 231, 223, 0.9);
+}
+
+/* ========== АНИМАЦИЯ ДЛЯ РАСПИСАНИЯ ========== */
+
+/* Базовое состояние — скрыто и сдвинуто влево */
+.animate-item {
+    opacity: 0;
+    transform: translateX(-40px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Состояние после появления — видимо и на месте */
+.animate-item.visible {
+    opacity: 1;
+    transform: translateX(0);
 }
 /* ========== БЛОК 5 ========== */
 .organizer-card-new {
