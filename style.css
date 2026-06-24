@@ -171,7 +171,7 @@ body {
 .animate-hero {
     opacity: 0;
     transform: translateX(-50px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
+    transition: opacity 1.0s ease, transform 1.0s ease;
 }
 
 /* Состояние после появления — видимо и на месте */
