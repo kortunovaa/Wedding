@@ -658,13 +658,51 @@ body {
 @media (max-width: 480px) {
     body {
         background: #d4c3b8 !important;
+        overflow-x: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
+    
+    .page-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        overflow-x: hidden;
+    }
+    
+    .wedding-block {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+    
     .hero-card-new,
     .greeting-card-new,
     .venue-card-new,
     .schedule-card-new,
-    .organizer-card-new {
+    .organizer-card-new,
+    .timer-card-new,
+    .designer-card {
         width: 432px;
-        margin: 0 auto;
+        flex-shrink: 0;
+        transform-origin: top center;
+        transform: scale(0.9);
+        margin: 0 auto 0 -5px;  /* ← отрицательный margin сдвигает влево */
+    }
+    
+    /* Для очень маленьких экранов */
+    @media (max-width: 380px) {
+        .hero-card-new,
+        .greeting-card-new,
+        .venue-card-new,
+        .schedule-card-new,
+        .organizer-card-new,
+        .timer-card-new,
+        .designer-card {
+            transform: scale(0.82);
+            margin: 0 auto 0 -8px;
+        }
     }
 }
