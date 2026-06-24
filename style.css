@@ -15,7 +15,7 @@ html {
 }
 
 body {
-    background: rgba(3, 30, 85, 1);
+    background: rgb(245, 245, 245);
     font-family: 'Caslon Becker No540 Swash', 'Playfair Display', serif;
     line-height: 1.2;
     min-height: 100vh;
@@ -113,7 +113,7 @@ body {
 
 .hero-text-top {
     width: 259px;
-    left: 87px;
+    left: 80px;
     top: 0;
     position: absolute;
     display: flex;
@@ -192,7 +192,7 @@ body {
 
 .greeting-content-new {
     width: 357px;
-    left: 38px;
+    left: 31px;
     top: 40px;
     position: absolute;
     display: flex;
@@ -249,7 +249,7 @@ body {
 
 .venue-content-new {
     width: 400px;
-    left: 16px;
+    left: 10px;
     top: 23px;
     position: absolute;
     display: flex;
@@ -349,7 +349,7 @@ body {
 
 .schedule-list-new {
     width: 380px;
-    left: 26px;
+    left: 20px;
     top: 65px;
     position: absolute;
     background: rgba(243, 231, 223, 0.1);
@@ -409,7 +409,7 @@ body {
 
 .organizer-content-new {
     width: 382px;
-    left: 25px;
+    left: 19px;
     top: 31px;
     position: absolute;
     display: flex;
@@ -495,7 +495,7 @@ body {
 
 .timer-content-new {
     width: 345px;
-    left: 43px;
+    left: 36px;
     top: 15px;
     position: absolute;
     display: flex;
