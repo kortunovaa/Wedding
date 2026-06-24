@@ -660,10 +660,10 @@ body {
     line-height: 20px;
 }
 
-/* ========== МОБИЛЬНЫЙ ФИКС (ЦЕНТРИРОВАНИЕ С ОДИНАКОВЫМИ ОТСТУПАМИ) ========== */
+/* ========== МОБИЛЬНЫЙ ФИКС (полная адаптация) ========== */
 @media (max-width: 480px) {
     body {
-        background: rgb(245, 245, 245) !important;
+        background: rgba(3, 30, 85, 1) !important;
         overflow-x: hidden;
         margin: 0;
         padding: 0;
@@ -683,6 +683,7 @@ body {
         overflow-x: hidden;
         margin: 0;
         padding: 0;
+        background: #031E55 !important;
     }
     
     .wedding-block {
@@ -694,7 +695,7 @@ body {
         line-height: 0;
     }
     
-    /* Все блоки — 100% ширины экрана, но не шире 432px */
+    /* Все блоки масштабируются под ширину экрана */
     .hero-card-new,
     .greeting-card-new,
     .venue-card-new,
@@ -702,48 +703,24 @@ body {
     .organizer-card-new,
     .timer-card-new,
     .designer-card {
-        width: 100%;
-        max-width: 432px;
+        width: 432px;
+        transform: scale(calc(100vw / 432));
+        transform-origin: top center;
         margin: 0 auto;
         flex-shrink: 0;
         display: block;
     }
     
-    /* Контент внутри блоков центрируется с одинаковыми отступами по бокам */
-    .hero-content-new,
-    .greeting-content-new,
-    .venue-content-new,
-    .organizer-content-new,
-    .timer-content-new,
-    .designer-content {
-        width: 90% !important;
-        left: 5% !important;
-        right: 5% !important;
-        transform: none !important;
-    }
-    
-    /* Специально для расписания */
-    .schedule-list-new {
-        width: 90% !important;
-        left: 5% !important;
-        right: 5% !important;
-        transform: none !important;
-    }
-    
-    .schedule-title-new {
-        width: 90% !important;
-        left: 5% !important;
-        right: 5% !important;
-    }
-    
-    /* Фото в блоке место проведения */
-    .venue-photo-new {
-        width: 100%;
-        height: auto;
-        aspect-ratio: 16/10;
-    }
-    
-    .venue-photo-wrapper-new {
-        padding: 16px 5%;
+    /* Для очень маленьких экранов (до 360px) */
+    @media (max-width: 360px) {
+        .hero-card-new,
+        .greeting-card-new,
+        .venue-card-new,
+        .schedule-card-new,
+        .organizer-card-new,
+        .timer-card-new,
+        .designer-card {
+            transform: scale(0.82);
+        }
     }
 }
