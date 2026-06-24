@@ -15,7 +15,7 @@ html {
 }
 
 body {
-    background: #d4c3b8;
+    background: rgba(3, 30, 85, 1);
     font-family: 'Caslon Becker No540 Swash', 'Playfair Display', serif;
     line-height: 1.2;
     min-height: 100vh;
