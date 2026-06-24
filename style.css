@@ -15,7 +15,7 @@ html {
 }
 
 body {
-    background: rgb(245, 245, 245);
+    background: rgba(3, 30, 85, 1);
     font-family: 'Caslon Becker No540 Swash', 'Playfair Display', serif;
     line-height: 1.2;
     min-height: 100vh;
@@ -52,6 +52,22 @@ body {
     display: flex;
     justify-content: center;
     width: 100%;
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+}
+
+/* ========== УБИРАЕМ ПРОМЕЖУТКИ МЕЖДУ БЛОКАМИ ========== */
+.hero-card-new,
+.greeting-card-new,
+.venue-card-new,
+.schedule-card-new,
+.organizer-card-new,
+.timer-card-new,
+.designer-card {
+    margin: 0;
+    padding: 0;
+    display: block;
 }
 
 /* ========== БЛОК 1 ========== */
@@ -166,15 +182,12 @@ body {
 }
 
 /* ========== АНИМАЦИЯ ДЛЯ БЛОКА 1 ========== */
-
-/* Базовое состояние — скрыто и сдвинуто влево */
 .animate-hero {
     opacity: 0;
     transform: translateX(-50px);
     transition: opacity 1.0s ease, transform 1.0s ease;
 }
 
-/* Состояние после появления — видимо и на месте */
 .animate-hero.visible {
     opacity: 1;
     transform: translateX(0);
@@ -192,7 +205,7 @@ body {
 
 .greeting-content-new {
     width: 357px;
-    left: 31px;
+    left: 37px;
     top: 40px;
     position: absolute;
     display: flex;
@@ -221,7 +234,6 @@ body {
     font-family: 'Caslon Becker No540 Swash', serif;
     font-style: italic;
     font-weight: 400;
-    /* text-transform: lowercase;  ← УДАЛИТЬ ЭТУ СТРОКУ! */
     line-height: 25px;
 }
 
@@ -249,7 +261,7 @@ body {
 
 .venue-content-new {
     width: 400px;
-    left: 10px;
+    left: 16px;
     top: 23px;
     position: absolute;
     display: flex;
@@ -300,7 +312,6 @@ body {
     cursor: pointer;
 }
 
-/* ===== ТЕКСТЫ С ШРИФТОМ CASLON BECKER ===== */
 .venue-hint-new {
     align-self: stretch;
     text-align: center;
@@ -349,7 +360,7 @@ body {
 
 .schedule-list-new {
     width: 380px;
-    left: 20px;
+    left: 27px;
     top: 65px;
     position: absolute;
     background: rgba(243, 231, 223, 0.1);
@@ -363,7 +374,6 @@ body {
     color: #F3E7DF;
 }
 
-/* Время (15:30, 16:00 и т.д.) */
 .schedule-time-new {
     font-size: 32px;
     font-family: 'Caslon Becker No540 Swash', serif;
@@ -373,7 +383,6 @@ body {
     color: #F3E7DF;
 }
 
-/* Описание (Сбор гостей, Церемония и т.д.) */
 .schedule-desc-new {
     font-size: 22px;
     font-family: 'Caslon Becker No540 Swash', serif;
@@ -384,19 +393,17 @@ body {
 }
 
 /* ========== АНИМАЦИЯ ДЛЯ РАСПИСАНИЯ ========== */
-
-/* Базовое состояние — скрыто и сдвинуто влево */
 .animate-item {
     opacity: 0;
     transform: translateX(-40px);
     transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
-/* Состояние после появления — видимо и на месте */
 .animate-item.visible {
     opacity: 1;
     transform: translateX(0);
 }
+
 /* ========== БЛОК 5 ========== */
 .organizer-card-new {
     width: 432px;
@@ -653,54 +660,90 @@ body {
     line-height: 20px;
 }
 
-
-/* ========== RESET И БАЗОВЫЕ НАСТРОЙКИ ========== */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html, body {
-    margin: 0;
-    padding: 0;
-}
-
-/* ========== УБИРАЕМ ПРОМЕЖУТКИ МЕЖДУ БЛОКАМИ ========== */
-.page-container {
-    gap: 0;
-    margin: 0;
-    padding: 0;
-}
-
-.wedding-block {
-    margin: 0;
-    padding: 0;
-    line-height: 0;
-}
-
-.hero-card-new,
-.greeting-card-new,
-.venue-card-new,
-.schedule-card-new,
-.organizer-card-new,
-.timer-card-new,
-.designer-card {
-    margin: 0;
-    padding: 0;
-    display: block;
-}
-/* ========== МОБИЛЬНЫЙ ФИКС ========== */
+/* ========== МОБИЛЬНЫЙ ФИКС (ЦЕНТРИРОВАНИЕ С ОДИНАКОВЫМИ ОТСТУПАМИ) ========== */
 @media (max-width: 480px) {
     body {
         background: #d4c3b8 !important;
+        overflow-x: hidden;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
     }
+    
+    .page-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .wedding-block {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        line-height: 0;
+    }
+    
+    /* Все блоки — 100% ширины экрана, но не шире 432px */
     .hero-card-new,
     .greeting-card-new,
     .venue-card-new,
     .schedule-card-new,
-    .organizer-card-new {
-        width: 432px;
+    .organizer-card-new,
+    .timer-card-new,
+    .designer-card {
+        width: 100%;
+        max-width: 432px;
         margin: 0 auto;
+        flex-shrink: 0;
+        display: block;
+    }
+    
+    /* Контент внутри блоков центрируется с одинаковыми отступами по бокам */
+    .hero-content-new,
+    .greeting-content-new,
+    .venue-content-new,
+    .organizer-content-new,
+    .timer-content-new,
+    .designer-content {
+        width: 90% !important;
+        left: 5% !important;
+        right: 5% !important;
+        transform: none !important;
+    }
+    
+    /* Специально для расписания */
+    .schedule-list-new {
+        width: 90% !important;
+        left: 5% !important;
+        right: 5% !important;
+        transform: none !important;
+    }
+    
+    .schedule-title-new {
+        width: 90% !important;
+        left: 5% !important;
+        right: 5% !important;
+    }
+    
+    /* Фото в блоке место проведения */
+    .venue-photo-new {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16/10;
+    }
+    
+    .venue-photo-wrapper-new {
+        padding: 16px 5%;
     }
 }
